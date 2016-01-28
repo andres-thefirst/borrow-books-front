@@ -18,7 +18,7 @@
 				</ul>
 			</div>
 			<div class="foot">
-				<a href="/#/book/{{ book.id }}"> Book it </a>
+				<a href="#/book/{{ book.id }}"> Book it </a>
 			</div>
 		</div>
 	</div>

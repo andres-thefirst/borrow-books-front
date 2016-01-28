@@ -35,13 +35,17 @@
 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 		<!--  <script src="<c:url value="/resources/js/index.js" /> " type="text/javascript"></script> -->
 		<script src="<c:url value="/resources/js/app/app.js" /> " type="text/javascript"></script>
+		<script src="<c:url value="/resources/js/app/app.router.js" /> " type="text/javascript"></script>
+		<script src="<c:url value="/resources/js/app/menu.directive.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/controllers/sign-up.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/controllers/register-book.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/controllers/form-book.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/controllers/upload-image.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/controllers/search-books.js" /> " type="text/javascript"></script>
+		<script src="<c:url value="/resources/js/controllers/show-book.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/directives/repeat.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/directives/username.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/services/book-image.js" /> " type="text/javascript"></script>
+		<script src="<c:url value="/resources/js/services/user.js" /> " type="text/javascript"></script>
 	</body>
 </html>

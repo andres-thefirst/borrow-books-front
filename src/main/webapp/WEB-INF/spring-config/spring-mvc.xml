@@ -27,6 +27,7 @@
 	<mvc:view-controller path="/share" view-name="share" />
 	<mvc:view-controller path="/menu" view-name="menu" />
 	<mvc:view-controller path="/books" view-name="books" />
+	<mvc:view-controller path="/book" view-name="book" />
 	 
 	<mvc:annotation-driven />
  

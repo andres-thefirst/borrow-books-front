@@ -1,7 +1,11 @@
 /**
  * 
  */
-app.controller('SignUp', ['$scope','$http', function($scope,$http){
+app.controller('SignUp', SignUp);
+
+SignUp.$inject = ['$scope','$http'];
+
+function SignUp($scope, $http){
 	$scope.messages="";
 	$scope.signUp = function(){
 		$scope.messages="";
@@ -34,4 +38,4 @@ app.controller('SignUp', ['$scope','$http', function($scope,$http){
 		$scope.form.$setUntouched();
 
       };
-}]);
+};

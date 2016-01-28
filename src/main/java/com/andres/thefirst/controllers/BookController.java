@@ -30,6 +30,7 @@ import com.andres.thefirst.books.service.ISystemFileBo;
 import com.andres.thefirst.books.service.IUserBo;
 import com.andres.thefirst.dto.BookDto;
 import com.andres.thefirst.dto.ResponseDto;
+import com.andres.thefirst.request.BookFindRqt;
 import com.andres.thefirst.request.BookRegisterRqt;
 import com.andres.thefirst.request.BookSearchRqt;
 import com.andres.thefirst.response.BookConsultRsp;
@@ -132,7 +133,7 @@ public class BookController {
 			fileBo.saveFile(bytesImage, pathName);
 			
 			Book book = bookBo.findById(id);
-			book.setImage(pathName);
+			book.setImage(pathName.replace("\\", "/"));
 			bookBo.save(book);
 			
 		}catch(Exception e){
@@ -189,7 +190,24 @@ public class BookController {
 			logger.info("::getImage::Error to consult the image");
 		}
 		
-		logger.info("::getImage::Starting process");
+		logger.info("::getImage::Ending process");
 		return data;
+	}
+	
+	@RequestMapping(value="/book/findById", method=RequestMethod.POST)
+	public @ResponseBody ResponseDto findById(@RequestBody BookFindRqt rqt){
+		ResponseDto response = new ResponseDto();
+		
+		logger.info("::findById::Starting process");
+		try{
+			Book book = bookBo.findById(rqt.getId());
+			BookDto dto = new BookDto(book);
+			response.setContent(dto);
+		}catch(Exception e){
+			logger.info("::findById::Error to consult the book");
+		}
+		
+		logger.info("::findById::Ending process");
+		return response;
 	}
 }
