@@ -47,5 +47,7 @@
 		<script src="<c:url value="/resources/js/directives/username.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/services/book-image.js" /> " type="text/javascript"></script>
 		<script src="<c:url value="/resources/js/services/user.js" /> " type="text/javascript"></script>
+		<script src="<c:url value="/resources/js/services/book.js" /> " type="text/javascript"></script>
+		<script src="<c:url value="/resources/js/services/paginator.js" /> " type="text/javascript"></script>
 	</body>
 </html>

@@ -1,0 +1,38 @@
+=prefixes ( $property, $value, $prefixes: null )
+	@if not $prefixes
+		$prefixes: webkit moz ms o
+
+	@each $prefix in $prefixes
+		-#{$prefix}-#{$property}: $value
+
+	#{$property}: $value
+
+=btn($g: #fff, $f: #f6f6f6, $c: #666)
+	+prefixes(box-shadow, inset 0px 1px 0px 0px $g)
+	+prefixes(border-radius, 6px)
+	+prefixes(background, linear-gradient(top, $g 5%, $f 100%))
+	
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $g), color-stop(1, $f))
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$g', endColorstr='$f',GradientType=0)
+	background-color: $g
+	border: 1px solid #dcdcdc
+	display: inline-block
+	cursor: pointer
+	color: $c
+	font-size: 1.6em
+	font-weight: bold
+	padding: 6px 24px
+	text-decoration: none
+	text-shadow: 0px 1px 0px $g
+
+	&:hover 
+		+prefixes(background, linear-gradient(top, $f 5%, $g 100%))
+
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $f), color-stop(1, $g))
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$g', endColorstr='$f',GradientType=0)
+		background-color: $f
+
+	&:active 
+		position: relative
+		top: 1px

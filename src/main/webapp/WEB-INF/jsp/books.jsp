@@ -22,6 +22,19 @@
 			</div>
 		</div>
 	</div>
+	<div class="pagination">
+		<div class="wrap-button">
+			<span ng-click="first()"> First </span>
+			<span ng-click="prev()"> Prev </span>
+		</div>
+		<div ng-repeat="number in numbers" class="wrap-button">
+			<span ng-click="goToPage(number)" ng-class="isActived(number)"> {{ number }} </span>
+		</div>
+		<div class="wrap-button">
+			<span ng-click="next()"> Next </span>
+			<span ng-click="last()"> Last </span>
+		</div>
+	</div>
 </section>
 <input type="hidden"            
 				name="${_csrf.parameterName}"

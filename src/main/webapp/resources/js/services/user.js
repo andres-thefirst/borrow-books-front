@@ -5,25 +5,25 @@
 	
 	function User($http, $q){
 		
-		this.existUser = function(email){
+		var existUser = function(email){
 			var def = $q.defer();
-			
+			console.log(email);
 			$http.post(contextPath+'/user/isUserExist', { email: email}, {method: 'POST'}).then(
 					  function(response){
-						  if(response.data.content!=null && !response.data.content)
-							  def.resolve();
-						  else
-							  def.reject()
+						  if(response.data.content!=null && !response.data.content){
+							  def.resolve(response.data.content);
+						  }else
+							  def.reject();
 					  },
 					  function(response){
 						  def.reject()
-						  console.log(response);
 					  }
 			  )
-			  
 			  return def.promise;
 		}
 		
-		return this;
+		return {
+			existUser: existUser
+		};
 	}
 })(app);

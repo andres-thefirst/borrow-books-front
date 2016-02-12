@@ -15,7 +15,7 @@
 	<bean id="viewResolver"
         class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-		<property name="prefix" value="/jsp/" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
  
@@ -28,6 +28,9 @@
 	<mvc:view-controller path="/menu" view-name="menu" />
 	<mvc:view-controller path="/books" view-name="books" />
 	<mvc:view-controller path="/book" view-name="book" />
+	
+	
+	<mvc:view-controller path="/test-bdd" view-name="test-bdd" />
 	 
 	<mvc:annotation-driven />
  

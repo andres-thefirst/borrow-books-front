@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+describe('exist user', function () {
+	
+});

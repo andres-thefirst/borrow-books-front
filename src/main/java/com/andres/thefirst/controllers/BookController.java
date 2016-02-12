@@ -26,6 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.andres.thefirst.books.entity.Book;
 import com.andres.thefirst.books.entity.User;
 import com.andres.thefirst.books.service.IBookBo;
+import com.andres.thefirst.books.service.IBookGenreBo;
 import com.andres.thefirst.books.service.ISystemFileBo;
 import com.andres.thefirst.books.service.IUserBo;
 import com.andres.thefirst.dto.BookDto;
@@ -41,7 +42,7 @@ import com.andres.thefirst.session.NewBook;
 public class BookController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(BookController.class);
-
+	
 	@Autowired
 	private IUserBo userBo;
 	
@@ -60,6 +61,8 @@ public class BookController {
 	    }
 	    return null;
 	}
+	
+
 	 
 	@RequestMapping(value="/book/register", method=RequestMethod.POST)
 	public @ResponseBody ResponseDto register(@RequestBody BookRegisterRqt rqt){

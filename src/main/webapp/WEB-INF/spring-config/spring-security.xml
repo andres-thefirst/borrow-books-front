@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/security/spring-security.xsd">
     
     <http security="none" pattern="/resources/**"/>
+    <http security="none" pattern="/test-bdd"/>
+
     <!-- <http pattern="/login*" security="none"/> -->
     
    <http pattern="/index" security="none"/>

@@ -1,3 +1,5 @@
+'use strict';
+
 app.directive('menu', function() {
   return {
 	restrict: 'E',
